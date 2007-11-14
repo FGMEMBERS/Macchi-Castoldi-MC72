@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <author>BARANGER Emmanuel (3D), Syd Adams (FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>0.1 Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <type type="string">seaplane</type>
+  
+    <startup>
+      <splash-texture>Aircraft/Macchi-Castoldi-MC72/mc72-splash.rgb</splash-texture>
+    </startup>
+  
+    <sound>
+      <path>Aircraft/Macchi-Castoldi-MC72/Sounds/mc72-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Macchi-Castoldi-MC72/Models/mc72.xml</path>
+    </model>
+
+    <submodels> 
+      <serviceable>true</serviceable>
+      <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/submodels.xml</path>
+    </submodels>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+    </multiplay> 
+
+    <help>
+      <title>Macchi Castoldi M.C. 72</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <line>           Schneider Trophy (1931)            </line>
+      <line>----------------------------------------------</line>
+      <line>Macchi Castoldi M.C. 72                       </line>
+      <line>                                              </line>
+      <line> Wingspan   : 31 ft 1.25 in ( 9.48 m )        </line>
+      <line> Lenght     : 27 ft 3.5 in  ( 8.32 m )        </line>
+      <line> Height     : 12 ft 3 in    ( 3.30 m )        </line>
+      <line> Powerplant : Fiat A.S.6 V24 (2850 hp)        </line>
+      <line>______________________________________________</line>
+    </help>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/mc72-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <mc72> 
+      <file>Aircraft/Macchi-Castoldi-MC72/Nasal/doors.nas</file>
+    </mc72>
+  </nasal>
+
+</PropertyList>
