@@ -32,7 +32,7 @@
   <engine>
    <name>enginerun</name>
    <mode>looped</mode>
-   <path>Aircraft/Macchi-Castoldi-MC72/Sounds/waspjr.wav</path>
+   <path>Sounds/wasp.wav</path>
    <condition>
     <property>/engines/engine[0]/running</property>
    </condition>
@@ -51,7 +51,7 @@
   <engine>
    <name>enginerun</name>
    <mode>looped</mode>
-   <path>Aircraft/Macchi-Castoldi-MC72/Sounds/waspjr.wav</path>
+   <path>Sounds/wasp.wav</path>
    <condition>
     <property>/engines/engine[1]/running</property>
    </condition>
@@ -70,7 +70,7 @@
   <rumble>
    <name>rumble</name>
    <mode>looped</mode>
-   <path>Aircraft/Macchi-Castoldi-MC72/Sounds/flotte.wav</path>
+   <path>Sounds/wave.wav</path>
    <condition>
     <or>
      <property>/gear/gear[0]/wow</property>
@@ -90,7 +90,7 @@
 
   <squeal>
    <name>water</name>
-   <path>Aircraft/Macchi-Castoldi-MC72/Sounds/flotte.wav</path>
+   <path>Sounds/wave.wav</path>
    <condition>
     <or>
      <property>/gear/gear[0]/wow</property>
@@ -160,7 +160,7 @@
 <switch>
    <name>click on</name>
    <mode>once</mode>
-         <path>Aircraft/Macchi-Castoldi-MC72/Sounds/click.wav</path>
+         <path>Sounds/click.wav</path>
    <condition>
 <property>/sim/sound/switch</property>
 </condition>
@@ -172,7 +172,7 @@
 <switch>
    <name>click off</name>
    <mode>once</mode>
-        <path>Aircraft/Macchi-Castoldi-MC72/Sounds/click.wav</path>
+        <path>Sounds/click.wav</path>
    <condition>
    <not>
 <property>/sim/sound/switch</property>
