@@ -4,7 +4,7 @@
 
   <sim include="Nasal/views.xml">
  
-    <author>BARANGER Emmanuel (3D), Syd Adams (FDM)</author>
+    <author>Emmanuel BARANGER (3D), Pierre GEOFFROY (FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>0.1 Alpha</status>
    
@@ -24,10 +24,12 @@
       <path archive="y">Aircraft/Macchi-Castoldi-MC72/Models/mc72.xml</path>
     </model>
 
+<!--
     <submodels> 
       <serviceable>true</serviceable>
       <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/submodels.xml</path>
     </submodels>
+-->
 
     <multiplay>
       <chat_display>1</chat_display>
