@@ -200,13 +200,13 @@
   </gear>
 
   <!-- Fuel  -->  
-  <tank x="1.5" y="0" z="-0.7" capacity="210" />
-  <tank x="0.0" y="0" z="-0.7" capacity="210" />
-  <tank x="-1.5" y="0" z="-0.7" capacity="156" />
+  <tank x="1.5" y="0" z="-0.7" capacity="349" />
+  <tank x="0.0" y="0" z="-0.7" capacity="349" />
+  <tank x="-1.5" y="0" z="-0.7" capacity="259" />
 
   <!-- CG theorique x="0.831" y="0.0" z="0.014" --> 
 
-  <ballast x="-0.83" y="0.001" z="-2.85" mass="450" />
+  <ballast x="-0.71" y="0.001" z="-2.73" mass="450" />
   
   <weight x="0.75" y="0.0" z="-0.5" mass-prop="/sim/weight[0]/weight-lb"/>
   <weight x="-1.0" y="0" z="-0.5" mass-prop="/sim/weight[1]/weight-lb"/>
