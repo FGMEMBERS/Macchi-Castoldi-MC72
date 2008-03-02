@@ -61,13 +61,44 @@
   <model>
     <path>Aircraft/Macchi-Castoldi-MC72/Models/Panel/panel.xml</path>
     <offsets>
-      <x-m> 0.436 </x-m>
+      <x-m> 0.296 </x-m>
       <y-m> 0.000 </y-m>
-      <z-m> 0.677 </z-m>
+      <z-m> 0.704 </z-m>
     </offsets>
   </model>
 
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  0.519 </x-m>
+      <y-m>  0.022 </y-m>
+      <z-m>  0.056 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote invisible depuis le cockpit -->
+  <animation>
+    <type>select</type>
+    <object-name>Pilote</object-name>
+    <condition>
+      <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0</value>
+      </greater-than>
+    </condition>
+  </animation>
+
   <!-- L'hélice du moteur 1--> 
+  <animation>
+    <name>HeliceComplete1</name>
+    <object-name>propdisc1</object-name>
+    <object-name>propblur1</object-name>
+    <object-name>helice1</object-name>
+    <object-name>bol1</object-name>
+  </animation>
+
   <!-- Séléction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
@@ -110,10 +141,7 @@
 
   <animation>
     <type>spin</type>
-    <object-name>helice1</object-name>
-    <object-name>bol1</object-name>
-    <object-name>propdisc1</object-name>
-    <object-name>propblur1</object-name>
+    <object-name>HeliceComplete1</object-name>
     <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -129,6 +157,14 @@
   </animation>
 
   <!-- L'hélice du moteur 2--> 
+  <animation>
+    <name>HeliceComplete2</name>
+    <object-name>propdisc2</object-name>
+    <object-name>propblur2</object-name>
+    <object-name>helice2</object-name>
+    <object-name>bol2</object-name>
+  </animation>
+
   <!-- Séléction de l'objet visible en fonction des rpm -->
   <animation>
     <type>select</type>
@@ -171,10 +207,7 @@
 
   <animation>
     <type>spin</type>
-    <object-name>helice2</object-name>
-    <object-name>bol2</object-name>
-    <object-name>propdisc2</object-name>
-    <object-name>propblur2</object-name>
+    <object-name>HeliceComplete2</object-name>
     <property>engines/engine[1]/rpm</property>
     <factor> 1 </factor>
     <center>

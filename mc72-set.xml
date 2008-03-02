@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList include="mc72-base.xml">
+
+ <sim>
+  <author>Emmanuel BARANGER (3D), Pierre GEOFFROY (FDM)</author>
+
+  <flight-model>yasim</flight-model>
+  <aero>mc72-yasim</aero>
+
+ </sim>
+
+</PropertyList>
+
