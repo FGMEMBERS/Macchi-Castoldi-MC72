@@ -3,11 +3,6 @@
 <PropertyList>
 
   <path>mc72.ac</path>
-  <offsets>
-    <x-m> 0.0 </x-m>
-    <y-m> 0.0 </y-m>
-    <z-m> 0.0 </z-m>
-  </offsets>
 
   <animation>
     <!-- Objets opaques -->
@@ -17,8 +12,6 @@
     <object-name>derive</object-name>
     <object-name>floteurG</object-name>
     <object-name>floteurD</object-name>
-    <object-name>sousfloteurG</object-name>
-    <object-name>sousfloteurD</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>direction</object-name>
@@ -46,6 +39,84 @@
     <type>noshadow</type>
     <object-name>vitre</object-name>
   </animation>
+
+  <!-- Trainée gauche -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakeG.xml</path>
+    <offsets>
+      <x-m>  2.096 </x-m>
+      <y-m> -1.373 </y-m>
+      <z-m> -0.999 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -45.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Trainée droite -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakeD.xml</path>
+    <offsets>
+      <x-m>  2.096 </x-m>
+      <y-m>  1.373 </y-m>
+      <z-m> -0.999 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -45.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Eclaboussures, avant gauche -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetG.xml</path>
+    <offsets>
+      <x-m> -3.783 </x-m>
+      <y-m> -1.373 </y-m>
+      <z-m> -1.214 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -90.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Eclaboussures, avant droite -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetD.xml</path>
+    <offsets>
+      <x-m> -3.783 </x-m>
+      <y-m>  1.373 </y-m>
+      <z-m> -1.214 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -90.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Eclaboussures, centre gauche -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetmG.xml</path>
+    <offsets>
+      <x-m> -0.989 </x-m>
+      <y-m> -1.373 </y-m>
+      <z-m> -1.090 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -90.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Eclaboussures, centre droite -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetmD.xml</path>
+    <offsets>
+      <x-m> -0.989 </x-m>
+      <y-m>  1.373 </y-m>
+      <z-m> -1.090 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg> -90.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> 
 
   <!-- Intérieur -->
   <model>
