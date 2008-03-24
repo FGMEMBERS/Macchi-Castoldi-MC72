@@ -8,7 +8,7 @@ OBJECT poly
 name "moteurs"
 data 7
 moteurs
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 40
@@ -288,7 +288,7 @@ OBJECT poly
 name "panel"
 data 5
 panel
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 261

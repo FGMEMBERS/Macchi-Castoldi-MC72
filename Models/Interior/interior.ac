@@ -10,7 +10,7 @@ OBJECT poly
 name "Cube"
 data 4
 Cube
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 11
@@ -72,7 +72,7 @@ OBJECT poly
 name "armature1"
 data 9
 armature1
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 294
@@ -1772,7 +1772,7 @@ OBJECT poly
 name "armature2"
 data 9
 armature2
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 256
@@ -2934,7 +2934,7 @@ OBJECT poly
 name "armature3"
 data 9
 armature3
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 42
@@ -3154,7 +3154,7 @@ OBJECT poly
 name "cache"
 data 5
 cache
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 12
@@ -3218,7 +3218,7 @@ OBJECT poly
 name "cylinder.002"
 data 8
 Mesh.013
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 61.000000
 numvert 30
@@ -3405,7 +3405,7 @@ OBJECT poly
 name "interieur"
 data 9
 interieur
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 204
@@ -5069,7 +5069,7 @@ OBJECT poly
 name "pedaleD"
 data 7
 pedaleD
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 306
@@ -7192,7 +7192,7 @@ OBJECT poly
 name "pedaleG"
 data 7
 pedaleG
-texture "colors.rgb"
+texture "colors.png"
 texrep 1 1
 crease 30.000000
 numvert 306

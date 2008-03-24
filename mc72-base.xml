@@ -13,7 +13,7 @@
     <type type="string">seaplane</type>
   
     <startup>
-      <splash-texture>Aircraft/Macchi-Castoldi-MC72/mc72-splash.rgb</splash-texture>
+      <splash-texture>Aircraft/Macchi-Castoldi-MC72/mc72-splash.png</splash-texture>
     </startup>
   
     <sound>
@@ -23,13 +23,6 @@
     <model>
       <path archive="y">Aircraft/Macchi-Castoldi-MC72/Models/mc72.xml</path>
     </model>
-
-<!--
-    <submodels> 
-      <serviceable>true</serviceable>
-      <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/submodels.xml</path>
-    </submodels>
--->
 
     <multiplay>
       <chat_display>1</chat_display>
@@ -65,3 +58,4 @@
   </nasal>
 
 </PropertyList>
+
