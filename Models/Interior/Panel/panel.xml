@@ -5,7 +5,7 @@
   <path>panel.ac</path>
 
   <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Panel/Instruments/Speed/airspeed.xml</path>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/Speed/airspeed.xml</path>
     <offsets>
       <x-m>  0.005 </x-m>
       <y-m>  0.000 </y-m>
@@ -14,7 +14,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Panel/Instruments/Rpm/tachimeter1.xml</path>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/Rpm/tachimeter1.xml</path>
     <offsets>
       <x-m>  0.004 </x-m>
       <y-m> -0.082 </y-m>
@@ -23,7 +23,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Panel/Instruments/Rpm/tachimeter2.xml</path>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/Rpm/tachimeter2.xml</path>
     <offsets>
       <x-m>  0.004 </x-m>
       <y-m>  0.082 </y-m>

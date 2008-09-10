@@ -22,6 +22,9 @@
 
     <model>
       <path archive="y">Aircraft/Macchi-Castoldi-MC72/Models/mc72.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
     </model>
 
     <multiplay>
@@ -45,6 +48,8 @@
       <line>______________________________________________</line>
     </help>
 
+    <menubar include="Dialogs/mc72-menu.xml"/>
+
   </sim>
 
   <input>
@@ -54,6 +59,7 @@
   <nasal>
     <mc72> 
       <file>Aircraft/Macchi-Castoldi-MC72/Nasal/doors.nas</file>
+      <file>Aircraft/Macchi-Castoldi-MC72/Nasal/liveries.nas</file>
     </mc72>
   </nasal>
 

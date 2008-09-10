@@ -4,6 +4,15 @@
 
   <path>mc72.ac</path>
 
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Macchi-Castoldi-MC72/Models/Liveries", 10);
+    </load>
+    <unload>
+      livery_update.stop();
+    </unload>
+  </nasal>
+
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
@@ -38,6 +47,62 @@
   <animation>
     <type>noshadow</type>
     <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>aile2</object-name>
+    <object-name>derive</object-name>
+    <object-name>floteurG</object-name>
+    <object-name>floteurD</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>direction</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>poteau</object-name>
+    <object-name>cables</object-name>
+    <object-name>tourvitre</object-name>
+    <object-name>appuis</object-name>
+    <object-name>echappe</object-name>
+    <object-name>bol1</object-name>
+    <object-name>bol2</object-name>
+    <object-name>helice1</object-name>
+    <object-name>helice2</object-name>
+
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+<!--
+    <diffuse>
+      <red-prop>diffuse/red</red-prop>
+      <green-prop>diffuse/green</green-prop>
+      <blue-prop>diffuse/blue</blue-prop>
+    </diffuse>
+
+    <ambient>
+      <red-prop>ambient/red</red-prop>
+      <green-prop>ambient/green</green-prop>
+      <blue-prop>ambient/blue</blue-prop>
+    </ambient>
+-->
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+
+    <emission>
+      <red-prop>emission/red</red-prop>
+      <green-prop>emission/green</green-prop>
+      <blue-prop>emission/blue</blue-prop>
+    </emission>
+<!--
+    <shininess>
+      <shininess-prop>shininess</shininess-prop>
+    </shininess>
+-->
   </animation>
 
   <!-- Trainée gauche -->
@@ -127,39 +192,6 @@
       <z-m> 0.407 </z-m>
     </offsets>
   </model>
-
-  <!-- Planches de bord -->
-  <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Panel/panel.xml</path>
-    <offsets>
-      <x-m> 0.296 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.704 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Pilote -->
-  <model>
-    <name>Pilote</name>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m>  0.519 </x-m>
-      <y-m>  0.022 </y-m>
-      <z-m>  0.056 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Pilote invisible depuis le cockpit -->
-  <animation>
-    <type>select</type>
-    <object-name>Pilote</object-name>
-    <condition>
-      <greater-than>
-        <property>sim/current-view/view-number</property>
-        <value>0</value>
-      </greater-than>
-    </condition>
-  </animation>
 
   <!-- L'hélice du moteur 1--> 
   <animation>
@@ -384,3 +416,4 @@
   </animation>
 
 </PropertyList>
+

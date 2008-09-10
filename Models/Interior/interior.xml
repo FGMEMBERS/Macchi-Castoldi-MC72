@@ -17,6 +17,27 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- Planches de bord -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -0.014 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.296 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <name>Pilote</name>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  0.209 </x-m>
+      <y-m>  0.022 </y-m>
+      <z-m> -0.351 </z-m>
+    </offsets>
+  </model>
+
   <!-- Palonnier -->
   <animation>
     <type>translate</type>

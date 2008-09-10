@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 
-<PropertyList include="mc72-base.xml">
+<!-- <PropertyList include="mc72-jsbsim-cnf.xml"> -->
+<PropertyList include="mc72-yasim-cnf.xml">
 
- <sim>
-  <author>Emmanuel BARANGER (3D), Pierre GEOFFROY (FDM)</author>
+  <sim>
 
-  <flight-model>yasim</flight-model>
-  <aero>mc72-yasim</aero>
+    <description>Macchi Castoldi M.C. 72</description>
+    <author>Emmanuel BARANGER (3D), Pierre GEOFFROY (FDM)</author>
 
- </sim>
+  </sim>
 
 </PropertyList>
 
