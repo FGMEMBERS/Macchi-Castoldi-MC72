@@ -15,6 +15,19 @@
     <object-name>pedaleD</object-name>
 
     <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
   </animation>
 
   <!-- Planches de bord -->
@@ -59,6 +72,24 @@
     <axis>
       <x> 1.000 </x>
       <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+  <!-- Canopy -->
+  <animation>
+    <type>rotate</type>
+    <object-name>intvitres</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <factor>-162</factor>
+    <center>
+      <x-m> -0.061 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.459 </z-m>
+    </center>
+    <axis>
+      <x> 0.000 </x>
+      <y> 1.000 </y>
       <z> 0.000 </z>
     </axis>
   </animation>
