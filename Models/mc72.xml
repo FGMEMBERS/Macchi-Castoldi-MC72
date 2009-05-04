@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <PropertyList>
 
@@ -19,8 +19,8 @@
     <object-name>aile</object-name>
     <object-name>aile2</object-name>
     <object-name>derive</object-name>
-    <object-name>floteurG</object-name>
-    <object-name>floteurD</object-name>
+    <object-name>floteurs</object-name>
+    <object-name>sousfloteurs</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>direction</object-name>
@@ -62,8 +62,8 @@
     <object-name>aile</object-name>
     <object-name>aile2</object-name>
     <object-name>derive</object-name>
-    <object-name>floteurG</object-name>
-    <object-name>floteurD</object-name>
+    <object-name>floteurs</object-name>
+    <object-name>sousfloteurs</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
     <object-name>direction</object-name>
