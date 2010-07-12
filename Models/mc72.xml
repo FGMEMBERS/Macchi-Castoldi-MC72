@@ -35,25 +35,12 @@
     <object-name>helice1</object-name>
     <object-name>helice2</object-name>
 
-
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
     <object-name>propdisc1</object-name>
     <object-name>propblur1</object-name>
     <object-name>propdisc2</object-name>
     <object-name>propblur2</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitres</object-name>
   </animation>
 
   <animation>
@@ -112,6 +99,37 @@
 -->
   </animation>
 
+  <effect>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>aile2</object-name>
+    <object-name>derive</object-name>
+    <object-name>floteurs</object-name>
+    <object-name>sousfloteurs</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>direction</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>poteau</object-name>
+    <object-name>tourvitre</object-name>
+    <object-name>appuis</object-name>
+    <object-name>bol1</object-name>
+    <object-name>bol2</object-name>
+  </effect>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitres</object-name>
+  </animation>
+
   <!-- Trainée gauche -->
   <model>
     <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakeG.xml</path>
@@ -119,9 +137,9 @@
       <x-m>  2.096 </x-m>
       <y-m> -1.373 </y-m>
       <z-m> -0.999 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -45.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -132,9 +150,9 @@
       <x-m>  2.096 </x-m>
       <y-m>  1.373 </y-m>
       <z-m> -0.999 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -45.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -145,9 +163,9 @@
       <x-m> -3.783 </x-m>
       <y-m> -1.373 </y-m>
       <z-m> -1.214 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -90.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -158,9 +176,9 @@
       <x-m> -3.783 </x-m>
       <y-m>  1.373 </y-m>
       <z-m> -1.214 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -90.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -171,9 +189,9 @@
       <x-m> -0.989 </x-m>
       <y-m> -1.373 </y-m>
       <z-m> -1.090 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -90.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -184,9 +202,9 @@
       <x-m> -0.989 </x-m>
       <y-m>  1.373 </y-m>
       <z-m> -1.090 </z-m>
-      <roll-deg>    0.000 </roll-deg>
-      <pitch-deg> -90.000 </pitch-deg>
-      <heading-deg> 0.000 </heading-deg>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -90 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
@@ -260,9 +278,9 @@
       <z-m>  0.530 </z-m>
     </center>
     <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -326,9 +344,9 @@
       <z-m>  0.530 </z-m>
     </center>
     <axis>
-      <x> -1.000 </x>
-      <y>  0.000 </y>
-      <z>  0.000 </z>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -336,17 +354,17 @@
   <animation>
     <type>rotate</type>
     <object-name>profondeur</object-name>
-    <property>controls/flight/elevator</property>
-    <factor>11</factor>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 11 </factor>
     <center>
       <x-m> 3.696 </x-m>
       <y-m> 0.000 </y-m>
       <z-m> 0.539 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -354,17 +372,17 @@
   <animation>
     <type>rotate</type>
     <object-name>direction</object-name>
-    <property>controls/flight/rudder</property>
-    <factor>20</factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
     <center>
       <x-m> 3.626 </x-m>
       <y-m> 0.000 </y-m>
       <z-m> 0.811 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 0.000 </y>
-      <z> 1.000 </z>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
@@ -373,16 +391,16 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>15.0</factor>
+    <factor> 15 </factor>
     <center>
       <x-m> -0.284 </x-m>
       <y-m> -3.287 </y-m>
       <z-m>  0.012 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation> 
 
@@ -391,15 +409,15 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
-    <factor>15.0</factor>
+    <factor> 15 </factor>
     <center>
       <x-m> -0.284 </x-m>
       <y-m>  3.287 </y-m>
       <z-m>  0.012 </z-m>
     </center>    <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation> 
 
@@ -409,16 +427,16 @@
     <object-name>tourvitre</object-name>
     <object-name>vitres</object-name>
     <property>instrumentation/doors/crew/position-norm</property>
-    <factor>-162</factor>
+    <factor> -162 </factor>
     <center>
       <x-m> 0.249 </x-m>
       <y-m> 0.000 </y-m>
       <z-m> 0.866 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 

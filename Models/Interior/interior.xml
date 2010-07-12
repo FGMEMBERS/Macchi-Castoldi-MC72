@@ -21,7 +21,7 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>shader.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>intvitres</object-name>
   </animation>
 
@@ -58,9 +58,9 @@
     <property>controls/flight/rudder</property>
     <factor>0.04</factor>
     <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -70,9 +70,9 @@
     <property>controls/flight/rudder</property>
     <factor>-0.04</factor>
     <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
@@ -88,9 +88,9 @@
       <z-m>  0.459 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- MACCHI CASTOLDI M.C.72 - 2007 Emmanuel BARANGER
                                    Pierre GEOFFROY
 
@@ -26,15 +27,18 @@
   
   <cockpit x="-0.654" y="0" z="0.870"/>
 
-  <fuselage ax="3.759" ay="0" az="0.530" bx="-4.088" by="0" bz="0.418" width="0.740" taper="0.75" midpoint="0.25"/>
+  <fuselage ax="3.144" ay="0" az="0.530" bx="-3.593" by="0" bz="0.593" width="0.695" taper="0.4" midpoint="0.4"/>
 
-  <wing x="0.831" y="0.359" z="0.016" 
+  <fuselage ax="4.119" ay=" 1.374" az="-1.028" bx="-2.095" by=" 1.374" bz="-1.028" width="0.695" taper="0.4" midpoint="0.4"/>
+  <fuselage ax="4.119" ay="-1.374" az="-1.028" bx="-2.095" by="-1.374" bz="-1.028" width="0.695" taper="0.4" midpoint="0.4"/>
+
+  <wing x="0.831" y="0" z="0.016" 
         chord="1.655" 
-        length="4.382"
+        length="4.741"
         taper="1.0" 
-        camber="0.0001">
+        camber="0.007">
         <stall aoa="20" width="4" peak="1.5"/>
-        <flap1  start="0.58" end="1.00" lift="1.1" drag="1.2"/>
+        <flap1  start="0.51" end="1.00" lift="1.1" drag="1.2"/>
         <control-input split="true" control="FLAP1" axis="/controls/flight/aileron"/>
         <control-input split="true" control="FLAP1" axis="/controls/flight/aileron-trim"/>
         <control-output prop="/surface-positions/left-aileron-pos-norm" side="left" control="FLAP1"/>
@@ -52,11 +56,11 @@
          <control-output prop="/surface-positions/elevator-pos-norm" control="FLAP0"/>
   </hstab>
 
-  <vstab x="-3.605" y="0" z="0.056" 
-         sweep="15" 
-         chord="2.0" 
-         taper=".2" 
-         length="1.552">
+  <vstab x="-3.293" y="0" z="0.056" 
+         chord="1.510" 
+         length="1.6"
+         sweep="18" 
+         taper="0.4">
          <stall aoa="14" width="3" peak="1.5"/>
          <flap0  start="0" end="1" lift="1.6" drag="1.2"/>
          <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
@@ -65,10 +69,10 @@
   </vstab>
 
   <!-- Fiat AS6 V24 3100 HP (2 X Fiat AS5 V12 1550 HP each)
-       Propeller 2.4 m diameter fixed pitch
+       Propeller 2.76 m diameter fixed pitch
   -->
   <propeller x="1.206" y="0.0" z="0.443" 
-             radius="1.2"
+             radius="1.38"
              mass="1323" 
              moment="40"
              cruise-speed="330"
@@ -91,7 +95,7 @@
   </propeller>
 
   <propeller x="2.399" y="0.0" z="0.443" 
-             radius="1.2"
+             radius="1.38"
              mass="1323" 
              moment="40"
              cruise-speed="330"
@@ -196,11 +200,11 @@
   </gear>
 
   <!-- Fuel  -->  
-  <tank x="1.5" y="0" z="-0.7" capacity="349" />
-  <tank x="0.0" y="0" z="-0.7" capacity="349" />
-  <tank x="-1.5" y="0" z="-0.7" capacity="259" />
+  <tank x=" 1.3" y="0" z="-0.7" capacity="349" />
+  <tank x="-0.2" y="0" z="-0.7" capacity="349" />
+  <tank x="-1.7" y="0" z="-0.7" capacity="259" />
 
   <!-- CG theorique x="0.831" y="0.0" z="0.014" --> 
-  <ballast x="-0.71" y="0.001" z="-5.73" mass="450" />
+  <ballast x="-2.110" y="0" z="-1.730" mass="450" />
   
 </airplane>
