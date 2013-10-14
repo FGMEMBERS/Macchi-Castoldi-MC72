@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- MACCHI CASTOLDI M.C.72 - 2007 Emmanuel BARANGER
-                                   Pierre GEOFFROY
+                    Updated - 2008 Pierre GEOFFROY
+                    Updated - 2013 Emmanuel BARANGER
 
-     Engine  : Fiat AS6 V24 3100 HP (2 X Fiat AS5 V12 1550 HP each)
-     Winspan : 9.48 m
-     Length  : 8.32 m
-     Heigth  : 3.30 m
+     sources          : http://en.wikipedia.org/wiki/Macchi_M.C.72
+
+     wingspan         :    9.48 m    ( 31.00 ft 1.25 in )
+     length           :    8.32 m    ( 27.00 ft 3.50 in )
+     height           :    3.30 m    ( 10.83 ft         )
+     empty weight     :    2505 kg   (  5512 lb         )
+     max speed        : 709.209 km/h ( 382.9 kt         ) (world speed record)
+     engine           : 1 Fiat AS6 V24 3100 HP (2 X Fiat AS5 V12 1550 HP each)
 -->
 
 <airplane mass="5512" >
@@ -14,15 +19,15 @@
   <approach speed="70" aoa="8" fuel="0.2">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.2"/>
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.2"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
   </approach>
   
   <cruise speed="383" alt="5000" fuel="0.5">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
   </cruise>
   
   <cockpit x="-0.654" y="0" z="0.870"/>
@@ -35,25 +40,29 @@
   <wing x="0.831" y="0" z="0.016" 
         chord="1.655" 
         length="4.741"
-        taper="1.0" 
+        taper="1" 
         camber="0.007">
-        <stall aoa="20" width="4" peak="1.5"/>
-        <flap1  start="0.51" end="1.00" lift="1.1" drag="1.2"/>
-        <control-input split="true" control="FLAP1" axis="/controls/flight/aileron"/>
-        <control-input split="true" control="FLAP1" axis="/controls/flight/aileron-trim"/>
-        <control-output prop="/surface-positions/left-aileron-pos-norm" side="left" control="FLAP1"/>
-        <control-output prop="/surface-positions/right-aileron-pos-norm" side="right" control="FLAP1"/>
+        <stall aoa="20" width="1" peak="1.5"/>
+        <flap0  start="0.5" end="1" lift="1.1" drag="1.2"/>
+	
+        <control-input split="true" control="FLAP0" axis="/controls/flight/aileron"/>
+        <control-input split="true" control="FLAP0" axis="/controls/flight/aileron-trim"/>
+	
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
   </wing>
   
   <hstab x="-3.592" y="0.139" z="0.511"  
          chord="1.188" 
          taper="0.7" 
          length="1.132">
-         <stall aoa="18" width="4" peak="1.5"/>
+         <stall aoa="18" width="1" peak="1.5"/>
          <flap0 start="0" end="1" lift="1.5" drag="1.2"/>
+	 
          <control-input control="FLAP0" axis="/controls/flight/elevator"/>
          <control-input control="FLAP0" axis="/controls/flight/elevator-trim"/> 
-         <control-output prop="/surface-positions/elevator-pos-norm" control="FLAP0"/>
+	 
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
   </hstab>
 
   <vstab x="-3.293" y="0" z="0.056" 
@@ -61,33 +70,43 @@
          length="1.6"
          sweep="18" 
          taper="0.4">
-         <stall aoa="14" width="3" peak="1.5"/>
+         <stall aoa="14" width="1" peak="1.5"/>
          <flap0  start="0" end="1" lift="1.6" drag="1.2"/>
+	 
          <control-input control="FLAP0" axis="/controls/flight/rudder" invert="true"/>
          <control-input control="FLAP0" axis="/controls/flight/rudder-trim" invert="true"/>
-         <control-output prop="/surface-positions/rudder-pos-norm" control="FLAP0" min="1" max="-1"/>
+	 
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
   </vstab>
 
-  <!-- Fiat AS6 V24 3100 HP (2 X Fiat AS5 V12 1550 HP each)
-       Propeller 2.76 m diameter fixed pitch
-  -->
+<!--  Source           : http://en.wikipedia.org/wiki/Fiat_AS.6
+
+          Engine       : Fiat AS.6
+          Type         : 24-cylinder V-engine
+          Power        :  3100 hp at 3300 rpm   -> 2 x 1650
+          weight       :   930 kg ( 2050 lb   ) -> 2 x 1025
+          Displacement : 50.25 L  ( 3066 cu in) -> 2 x 1533
+          Compression  : 7:1
+          Gear ratio   : 0.743 or 0.512
+          Propeller    : 2.76 m diameter fixed pitch
+-->
   <propeller x="1.206" y="0.0" z="0.443" 
              radius="1.38"
-             mass="1323" 
+             mass="1025" 
              moment="40"
              cruise-speed="330"
              cruise-alt="5000" 
              cruise-power="1160" 
              cruise-rpm="1780" 
-	     takeoff-power="1550" 
-	     takeoff-rpm="1980"
+             takeoff-power="1650" 
+             takeoff-rpm="1980"
              gear-ratio="0.6"
              contra="1">
-             <piston-engine eng-rpm="3300" 
-                            eng-power="1550"
-                            displacement="1533" 
-                            compression="7"/>
              <actionpt x="3.583" y="0.0" z="0.530"/>
+             <piston-engine eng-rpm="3300" 
+                            eng-power="1650"
+                            displacement="1533"
+                            compression="7"/>
              <control-input control="THROTTLE" axis="/controls/engines/engine[0]/throttle"/>
              <control-input control="STARTER" axis="/controls/engines/engine[0]/starter"/>
              <control-input control="MAGNETOS" axis="/controls/engines/engine[0]/magnetos"/>
@@ -96,21 +115,21 @@
 
   <propeller x="2.399" y="0.0" z="0.443" 
              radius="1.38"
-             mass="1323" 
+             mass="1025" 
              moment="40"
              cruise-speed="330"
              cruise-alt="5000" 
              cruise-power="1160" 
              cruise-rpm="1780" 
-	     takeoff-power="1550" 
-	     takeoff-rpm="1980"
+             takeoff-power="1650" 
+             takeoff-rpm="1980"
              gear-ratio="0.6"
              contra="1">
+             <actionpt x="3.285" y="0.0" z="0.530"/>
              <piston-engine eng-rpm="3300" 
-                            eng-power="1550"
+                            eng-power="1650"
                             displacement="1533" 
                             compression="7"/>
-             <actionpt x="3.285" y="0.0" z="0.530"/>
              <control-input control="THROTTLE" axis="/controls/engines/engine[1]/throttle"/>
              <control-input control="STARTER" axis="/controls/engines/engine[1]/starter"/>
              <control-input control="MAGNETOS" axis="/controls/engines/engine[1]/magnetos"/>
@@ -118,8 +137,8 @@
   </propeller>
 
   <!-- Flotteurs -->
-  <!-- Centrale -->
-  <gear x="0.933" y="1.373" z="-1.645" 
+  <!-- 0 1 -Centrale -->
+  <gear x="0.933" y="1.373" z="-1.5" 
         compression="1.5" 
         spring = "15" 
         sfric = "0.85" 
@@ -132,7 +151,7 @@
         spring-factor-not-planing="0.25">
   </gear>
 
-  <gear x="0.933" y="-1.373" z="-1.645" 
+  <gear x="0.933" y="-1.373" z="-1.5" 
         compression="1.5" 
         spring = "15" 
         sfric = "0.85"
@@ -145,8 +164,8 @@
         spring-factor-not-planing="0.25">
   </gear>
 
-  <!-- Avant -->
-  <gear x="3.476" y="1.373" z="-1.43" 
+  <!-- 2 3 Avant -->
+  <gear x="3.476" y="1.373" z="-1.3" 
         compression="1.2" 
         spring = "15" 
         sfric = "0.8" 
@@ -159,7 +178,7 @@
         spring-factor-not-planing="0.7">
   </gear>
 
-  <gear x="3.476" y="-1.373" z="-1.43" 
+  <gear x="3.476" y="-1.373" z="-1.3" 
         compression="1.2" 
         spring = "15" 
         sfric = "0.8" 
@@ -172,8 +191,8 @@
         spring-factor-not-planing="0.7">
   </gear>
  
-  <!-- Arriere -->
-  <gear x="-2.146" y="1.373" z="-1.153" 
+  <!-- 4 5 Arriere -->
+  <gear x="-2.146" y="1.373" z="-1.1" 
         compression="1.8" 
         spring = "8" 
         sfric = "0.9" 
@@ -186,7 +205,7 @@
         spring-factor-not-planing="3">
   </gear>
 
-  <gear x="-2.146" y="-1.373" z="-1.153" 
+  <gear x="-2.146" y="-1.373" z="-1.1" 
         compression="1.8" 
         spring = "8" 
         sfric = "0.9" 
@@ -204,7 +223,7 @@
   <tank x="-0.2" y="0" z="-0.7" capacity="349" />
   <tank x="-1.7" y="0" z="-0.7" capacity="259" />
 
-  <!-- CG theorique x="0.831" y="0.0" z="0.014" --> 
+  <!-- Mass displacment --> 
   <ballast x="-2.110" y="0" z="-1.730" mass="450" />
   
 </airplane>

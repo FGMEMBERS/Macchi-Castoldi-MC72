@@ -1,15 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>panel.ac</path>
 
   <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m> -0.076 </y-m>
+      <z-m>  0.076 </z-m>
+    </offsets>
+  </model>
+
+  <model>
     <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/Speed/airspeed.xml</path>
     <offsets>
-      <x-m>  0.005 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.023 </z-m>
+      <x-m> 0.005 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.007 </z-m>
     </offsets>
   </model>
 
@@ -18,16 +27,70 @@
     <offsets>
       <x-m>  0.004 </x-m>
       <y-m> -0.082 </y-m>
-      <z-m> -0.024 </z-m>
+      <z-m>  0.006 </z-m>
     </offsets>
   </model>
 
   <model>
     <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/Rpm/tachimeter2.xml</path>
     <offsets>
-      <x-m>  0.004 </x-m>
-      <y-m>  0.082 </y-m>
-      <z-m> -0.024 </z-m>
+      <x-m> 0.004 </x-m>
+      <y-m> 0.082 </y-m>
+      <z-m> 0.006 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/Turn/turn.xml</path>
+    <offsets>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.072 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <offsets>
+      <x-m>  0.00130 </x-m>
+      <y-m>  0.15800 </y-m>
+      <z-m> -0.03237 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/psi/oil/oil.xml</path>
+    <offsets>
+      <x-m> 0.00344 </x-m>
+      <y-m> 0.14900 </y-m>
+      <z-m> 0.01360 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/temp/oil/oil.xml</path>
+    <offsets>
+      <x-m>  0.00360 </x-m>
+      <y-m> -0.13125 </y-m>
+      <z-m> -0.02850 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/temp/water/water.xml</path>
+    <offsets>
+      <x-m>  0.00341 </x-m>
+      <y-m> -0.16436 </y-m>
+      <z-m>  0.00548 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/Instruments/voltmeter/voltmeter.xml</path>
+    <offsets>
+      <x-m>  0.00000 </x-m>
+      <y-m> -0.13156 </y-m>
+      <z-m>  0.04534 </z-m>
     </offsets>
   </model>
  

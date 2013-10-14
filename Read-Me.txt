@@ -12,7 +12,7 @@ Macchi Castoldi MC72
 Manufacturer                  : Macchi
 Type                          : Racer
 Year                          : 1931
-Powerplant                    : 2 x Fiat A.S.6 V24 (2850 hp)
+Powerplant                    : 1 x Fiat A.S.6 V24 (2850 hp) = 2 x Fiat A.S.5 V12
 Wingspan                      : 31 ft 1.25 in
 Length                        : 27 ft 3.5 in
 Height                        : 12 ft 3 in
@@ -49,7 +49,7 @@ Macchi Castoldi MC72
 Constructeur                  : Macchi
 Type                          : Avion de course
 Année                         : 1931
-Moteur                        : 2 x Fiat A.S.6 V24 (2850 ch)
+Moteur                        : 1 x Fiat A.S.6 V24 (2850 ch) = 2 x Fiat A.S.5 V12
 Envergure                     : 9.48 m
 Longueur                      : 8.32 m
 Hauteur                       : 3.30 m

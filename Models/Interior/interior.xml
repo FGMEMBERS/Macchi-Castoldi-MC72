@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -13,6 +13,9 @@
     <object-name>armature3</object-name>
     <object-name>pedaleG</object-name>
     <object-name>pedaleD</object-name>
+    <object-name>cube</object-name>
+    <object-name>cylinder</object-name>
+    <object-name>inttourvitre</object-name>
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
@@ -30,13 +33,22 @@
     <object-name>intvitres</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>intvitres</object-name>
+  </effect>
+
   <!-- Planches de bord -->
   <model>
     <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -0.014 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.296 </z-m>
+      <x-m> 0.296 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.703 </z-m>
     </offsets>
   </model>
 
@@ -45,9 +57,9 @@
     <name>Pilote</name>
     <path>Aircraft/Macchi-Castoldi-MC72/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m>  0.209 </x-m>
-      <y-m>  0.022 </y-m>
-      <z-m> -0.351 </z-m>
+      <x-m> 0.519 </x-m>
+      <y-m> 0.022 </y-m>
+      <z-m> 0.056 </z-m>
     </offsets>
   </model>
 
@@ -55,7 +67,7 @@
   <animation>
     <type>translate</type>
     <object-name>pedaleG</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <factor>0.04</factor>
     <axis>
       <x> 1 </x>
@@ -67,7 +79,7 @@
   <animation>
     <type>translate</type>
     <object-name>pedaleD</object-name>
-    <property>controls/flight/rudder</property>
+    <property>surface-positions/rudder-pos-norm</property>
     <factor>-0.04</factor>
     <axis>
       <x> 1 </x>
@@ -78,14 +90,30 @@
 
   <!-- Canopy -->
   <animation>
+    <type>pick</type>
+    <object-name>intvitres</object-name>
+    <object-name>inttourvitre</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
     <type>rotate</type>
     <object-name>intvitres</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
-    <factor>-162</factor>
+    <object-name>inttourvitre</object-name>
+    <property>sim/model/door-positions/crew/position-norm</property>
+    <factor> -162 </factor>
     <center>
-      <x-m> -0.061 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.459 </z-m>
+      <x-m> 0.249 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.866 </z-m>
     </center>
     <axis>
       <x> 0 </x>

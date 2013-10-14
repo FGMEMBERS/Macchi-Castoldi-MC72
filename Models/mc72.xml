@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Macchi-Castoldi-MC72/Models/Liveries", 10);
+      
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -18,7 +32,6 @@
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>aile2</object-name>
-    <object-name>derive</object-name>
     <object-name>floteurs</object-name>
     <object-name>sousfloteurs</object-name>
     <object-name>aileronG</object-name>
@@ -26,14 +39,15 @@
     <object-name>direction</object-name>
     <object-name>profondeur</object-name>
     <object-name>poteau</object-name>
-    <object-name>cables</object-name>
     <object-name>tourvitre</object-name>
     <object-name>appuis</object-name>
-    <object-name>echappe</object-name>
     <object-name>bol1</object-name>
     <object-name>bol2</object-name>
+
+    <object-name>echappe</object-name>
     <object-name>helice1</object-name>
     <object-name>helice2</object-name>
+    <object-name>cables</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -48,7 +62,6 @@
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>aile2</object-name>
-    <object-name>derive</object-name>
     <object-name>floteurs</object-name>
     <object-name>sousfloteurs</object-name>
     <object-name>aileronG</object-name>
@@ -68,43 +81,47 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>aile2</object-name>
-    <object-name>derive</object-name>
+    <object-name>floteurs</object-name>
+    <object-name>sousfloteurs</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>direction</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>poteau</object-name>
+    <object-name>tourvitre</object-name>
+    <object-name>appuis</object-name>
+    <object-name>bol1</object-name>
+    <object-name>bol2</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>aile2</object-name>
     <object-name>floteurs</object-name>
     <object-name>sousfloteurs</object-name>
     <object-name>aileronG</object-name>
@@ -128,95 +145,73 @@
   <animation>
     <type>noshadow</type>
     <object-name>vitres</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propblur1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propblur2</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitres</object-name>
+    <object-name>propdisc1</object-name>
+    <object-name>propblur1</object-name>
+    <object-name>propdisc2</object-name>
+    <object-name>propblur2</object-name>
+  </effect>
+
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m> -1.1 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <name>Interieur</name>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
   </animation>
 
   <!-- Trainée gauche -->
   <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakeG.xml</path>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakes/wakeG.xml</path>
     <offsets>
       <x-m>  2.096 </x-m>
       <y-m> -1.373 </y-m>
       <z-m> -0.999 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
   <!-- Trainée droite -->
   <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakeD.xml</path>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/wakes/wakeD.xml</path>
     <offsets>
       <x-m>  2.096 </x-m>
       <y-m>  1.373 </y-m>
       <z-m> -0.999 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model> 
 
-  <!-- Eclaboussures, avant gauche -->
+  <!-- Cranking effects -->
   <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetG.xml</path>
-    <offsets>
-      <x-m> -3.783 </x-m>
-      <y-m> -1.373 </y-m>
-      <z-m> -1.214 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/all-cranking.xml</path>
   </model> 
-
-  <!-- Eclaboussures, avant droite -->
-  <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetD.xml</path>
-    <offsets>
-      <x-m> -3.783 </x-m>
-      <y-m>  1.373 </y-m>
-      <z-m> -1.214 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> 
-
-  <!-- Eclaboussures, centre gauche -->
-  <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetmG.xml</path>
-    <offsets>
-      <x-m> -0.989 </x-m>
-      <y-m> -1.373 </y-m>
-      <z-m> -1.090 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> 
-
-  <!-- Eclaboussures, centre droite -->
-  <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/jetmD.xml</path>
-    <offsets>
-      <x-m> -0.989 </x-m>
-      <y-m>  1.373 </y-m>
-      <z-m> -1.090 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> 
-
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/Macchi-Castoldi-MC72/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0.310 </x-m>
-      <y-m> 0.000 </y-m>
-      <z-m> 0.407 </z-m>
-    </offsets>
-  </model>
 
   <!-- L'hélice du moteur 1--> 
   <animation>
@@ -270,6 +265,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceComplete1</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -336,6 +337,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceComplete2</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[1]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -423,10 +430,25 @@
 
   <!-- Canopy -->
   <animation>
+    <type>pick</type>
+    <object-name>tourvitre</object-name>
+    <object-name>vitres</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+ 
+  <animation>
     <type>rotate</type>
     <object-name>tourvitre</object-name>
     <object-name>vitres</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -162 </factor>
     <center>
       <x-m> 0.249 </x-m>
@@ -441,4 +463,3 @@
   </animation>
 
 </PropertyList>
-

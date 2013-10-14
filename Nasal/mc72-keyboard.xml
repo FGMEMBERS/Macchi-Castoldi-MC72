@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <key n="100">
     <name>d</name>
-    <desc>Crew door</desc>
+    <desc>Engine doors</desc>
     <binding>
-      <command>nasal</command>
-      <script>mc72.doorsystem.crewexport();</script>
+     <command>nasal</command>
+     <script>doors.crew.toggle();</script>
     </binding>
   </key>
 
