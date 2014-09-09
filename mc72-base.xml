@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+ 
+    <description>Macchi Castoldi M.C. 72 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), Pierre GEOFFROY (FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>0.1 Alpha</status>
+   
+    <fuel-fraction>0.8</fuel-fraction>
+  
+    <type type="string">seaplane</type>
+  
+    <startup>
+      <splash-texture>Aircraft/Macchi-Castoldi-MC72/mc72-splash.png</splash-texture>
+    </startup>
+  
+    <sound>
+      <path>Aircraft/Macchi-Castoldi-MC72/Sounds/mc72-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Macchi-Castoldi-MC72/Models/mc72.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                      <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 2 altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft">  0 </float>               <!-- 3 altitude for trail -->
+        <float n="6" alias="/engines/engine[0]/rpm" />
+        <float n="8" alias="/engines/engine[0]/cranking" />
+        <string n="0" type="string" />
+        <string n="9" type="string" />                                        <!-- string[9] reserved for bombable mode -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Macchi Castoldi M.C. 72</title>
+      <key>
+        <name>d</name>
+        <desc>Open/Close canopy</desc>
+      </key>
+      <line>           Schneider Trophy (1931)            </line>
+      <line>----------------------------------------------</line>
+      <line>Macchi Castoldi M.C. 72                       </line>
+      <line>                                              </line>
+      <line> Wingspan   : 31 ft 1.25 in ( 9.48 m )        </line>
+      <line> Lenght     : 27 ft 3.5 in  ( 8.32 m )        </line>
+      <line> Height     : 12 ft 3 in    ( 3.30 m )        </line>
+      <line> Powerplant : Fiat A.S.6 V24 (2850 hp)        </line>
+      <line>______________________________________________</line>
+    </help>
+
+    <menubar include="Dialogs/mc72-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/mc72-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <doors>
+      <file>Aircraft/Macchi-Castoldi-MC72/Nasal/doors.nas</file>
+    </doors>
+    <mc72> 
+      <file>Aircraft/Macchi-Castoldi-MC72/Nasal/liveries.nas</file>
+    </mc72>
+  </nasal>
+
+</PropertyList>

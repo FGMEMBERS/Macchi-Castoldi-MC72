@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Left engine 1 -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.77599 </x-m>
+      <y-m> -0.30640 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.64204 </x-m>
+      <y-m> -0.31079 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.49605 </x-m>
+      <y-m> -0.31514 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.35307 </x-m>
+      <y-m> -0.31938 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.21160 </x-m>
+      <y-m> -0.32050 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.06109 </x-m>
+      <y-m> -0.32097 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <!-- Right engine 1 -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.77599 </x-m>
+      <y-m>  0.30640 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.64204 </x-m>
+      <y-m>  0.31079 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.49605 </x-m>
+      <y-m>  0.31514 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.35307 </x-m>
+      <y-m>  0.31938 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.21160 </x-m>
+      <y-m>  0.32050 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.06109 </x-m>
+      <y-m>  0.32097 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <!-- Left engine 2 -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.62126 </x-m>
+      <y-m> -0.32286 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.48731 </x-m>
+      <y-m> -0.32341 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.34133 </x-m>
+      <y-m> -0.32400 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.19834 </x-m>
+      <y-m> -0.32458 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.05687 </x-m>
+      <y-m> -0.32515 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -0.90636 </x-m>
+      <y-m> -0.32576 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <!-- Right engine 2 -->
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.62126 </x-m>
+      <y-m>  0.32286 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.48731 </x-m>
+      <y-m>  0.32341 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.34133 </x-m>
+      <y-m>  0.32400 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.19834 </x-m>
+      <y-m>  0.32458 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -1.05687 </x-m>
+      <y-m>  0.32515 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+  <model>
+    <path>Aircraft/Macchi-Castoldi-MC72/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -0.90636 </x-m>
+      <y-m>  0.32576 </y-m>
+      <z-m>  0.58659 </z-m>
+    </offsets>
+  </model> 
+
+</PropertyList>
